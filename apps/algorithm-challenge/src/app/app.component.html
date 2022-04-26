@@ -1,9 +1,29 @@
 <div style="text-align: center">
   <h1>Welcome to algorithm-challenge!</h1>
-  <img
-    width="450"
-    src="https://raw.githubusercontent.com/nrwl/nx/master/images/nx-logo.png"
-    alt="Nx - Smart, Fast and Extensible Build System"
-  />
+  <h2>Palindrome</h2>
 </div>
+
+<div style="text-align: center">
+  <div>
+    <label>Number: </label>
+    <input type="number" [(ngModel)]="numberInput" />
+  </div>
+  <div>
+    <label>is {{ numberInput }} a Palindrome: </label>
+    <span>{{ Transform.isPalindrome(numberInput) }}</span>
+  </div>
+  <div>
+    <label>{{ numberInput }} as reverse Number: </label>
+    <span>{{ Transform.reverseNumber(numberInput) }}</span>
+  </div>
+  <div *ngIf="Transform.palindrome(numberInput) as calculation">
+    <label>{{ numberInput }} as Palindrome: </label>
+    <span>{{ calculation.palindrome }}</span>
+    <label>
+      with {{ calculation.recursionCount }} cycles to calculate it.</label
+    >
+  </div>
+</div>
+
+<h1>API Calls:</h1>
 <div>Message: {{ hello$ | async | json }}</div>

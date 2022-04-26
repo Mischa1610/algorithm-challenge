@@ -1,7 +1,12 @@
+export interface PalindromeCalculation {
+  palindrome: number;
+  recursionCount: number;
+}
+
 export class Transform {
-  public static palindrome(N: number): number {
+  public static palindrome(N: number): PalindromeCalculation {
     if (Transform.isPalindrome(N)) {
-      return N;
+      return { palindrome: N, recursionCount: 1 };
     } else {
       const minInput = 1;
       const maxInput = 10000;
@@ -9,7 +14,7 @@ export class Transform {
         console.error(
           `${N} is not in the allowed range of ${minInput} to ${maxInput}`
         );
-        return -1;
+        return { palindrome: -1, recursionCount: 1 };
       } else {
         return Transform.recursionPalindrome(N);
       }
@@ -20,7 +25,7 @@ export class Transform {
     N: number,
     initialN = N,
     count = 1
-  ): number {
+  ): PalindromeCalculation {
     const maxValue = 1000000000;
     const rev = Transform.reverseNumber(N);
     const sum = N + rev;
@@ -28,10 +33,10 @@ export class Transform {
       console.error(
         `The palindrome could not be found for ${initialN} (searched until ${maxValue} and had ${count} turns).`
       );
-      return -1;
+      return { palindrome: -1, recursionCount: count };
     } else {
       if (Transform.isPalindrome(sum)) {
-        return sum;
+        return { palindrome: sum, recursionCount: count };
       } else {
         return Transform.recursionPalindrome(sum, initialN, count + 1);
       }
