@@ -25,9 +25,17 @@
   "scripts": {
     "ng": "nx",
     "postinstall": "node ./decorate-angular-cli.js && ngcc --properties es2015 browser module main",
-    "start": "nx serve",
+    "start": "concurrently --kill-others -n 'BE,FE' -c 'bgMagenta.bold,white.bgBlue.bold' 'npm run start-be' 'npm run start-fe'",
+    "start-be": "nx serve api",
+    "start-fe": "nx serve",
     "build": "nx build",
-    "test": "nx test"
+    "test": "npm run test-be && npm run test-fe",
+    "test-fe": "nx test",
+    "test-be": "nx test api",
+    "e2e": "nx e2e",
+    "lint": "nx lint",
+    "format": "prettier --write .",
+    "format-check": "prettier --check ."
   },
   "private": true,
   "dependencies": {
@@ -71,6 +79,7 @@
     "@types/node": "16.11.7",
     "@typescript-eslint/eslint-plugin": "~5.18.0",
     "@typescript-eslint/parser": "~5.18.0",
+    "concurrently": "^7.1.0",
     "cypress": "^9.1.0",
     "eslint": "~8.12.0",
     "eslint-config-prettier": "8.1.0",

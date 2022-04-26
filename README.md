@@ -9,7 +9,8 @@ An algorithm challenge that I try to solve / implement in around 2 hours.
 ## Getting Started
 
 - Install all dependencies `npm install`
-- Run the Node console app `npm start`
+- Run the frontend (FE) angular app and the backend (BE) nestjs app in parallel `npm start`
+- Run the tests (first backend than frontend tests) with `npm test`
   
 ## Alekseew - NX
 
