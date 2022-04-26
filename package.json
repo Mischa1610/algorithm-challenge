@@ -1,0 +1,33 @@
+{
+  "name": "algorithm-challenge",
+  "version": "1.0.0",
+  "description": "An algorithm challenge that I try to solve / implement in around 2 hours.",
+  "main": "dist/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "tsc": "tsc",
+    "start": "tsc -w",
+    "build": "tsc",
+    "format": "prettier --write"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Mischa1610/algorithm-challenge.git"
+  },
+  "keywords": [
+    "algrithm",
+    "challenge",
+    "test",
+    "typescript"
+  ],
+  "author": "Michael Alekseew (alekseew.m@googlemail.com)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Mischa1610/algorithm-challenge/issues"
+  },
+  "homepage": "https://github.com/Mischa1610/algorithm-challenge#readme",
+  "devDependencies": {
+    "prettier": "^2.6.2",
+    "typescript": "^4.6.3"
+  }
+}
