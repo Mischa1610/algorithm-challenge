@@ -9,7 +9,7 @@
     "start": "ts-node src/index.ts",
     "watch": "tsc -w",
     "build": "tsc",
-    "format": "prettier --write"
+    "format": "prettier --write ."
   },
   "repository": {
     "type": "git",
