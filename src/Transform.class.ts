@@ -11,14 +11,14 @@ export class Transform {
         );
         return -1;
       } else {
-        return Transform.recursionPalindrome(N, N);
+        return Transform.recursionPalindrome(N);
       }
     }
   }
 
   private static recursionPalindrome(
     N: number,
-    initialN: number,
+    initialN = N,
     count = 1
   ): number {
     const maxValue = 1000000000;
