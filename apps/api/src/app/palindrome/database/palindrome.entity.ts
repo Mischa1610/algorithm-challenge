@@ -1,7 +1,8 @@
-import { Entity, Column, PrimaryGeneratedColumn } from 'typeorm';
+import { IPalindrome } from '@alekseew/api-interfaces';
+import { Column, Entity, PrimaryGeneratedColumn } from 'typeorm';
 
 @Entity()
-export class Palindrome {
+export class Palindrome implements IPalindrome {
   @PrimaryGeneratedColumn()
   id: number;
 

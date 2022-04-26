@@ -1,7 +1,7 @@
+import { CreatePalindromeDto } from '@alekseew/api-interfaces';
 import { Injectable } from '@nestjs/common';
 import { InjectRepository } from '@nestjs/typeorm';
 import { Repository } from 'typeorm';
-import { CreatePalindromeDto } from './database/create-palindrome.dto';
 
 import { Palindrome } from './database/palindrome.entity';
 

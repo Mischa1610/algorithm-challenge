@@ -1,8 +1,8 @@
 import { Module } from '@nestjs/common';
 import { TypeOrmModule } from '@nestjs/typeorm';
 
-import { PalindromeController } from './palindrome.controller';
 import { Palindrome } from './database/palindrome.entity';
+import { PalindromeController } from './palindrome.controller';
 import { PalindromeService } from './palindrome.service';
 
 @Module({

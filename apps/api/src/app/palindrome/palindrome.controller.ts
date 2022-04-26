@@ -1,6 +1,6 @@
+import { CreatePalindromeDto } from '@alekseew/api-interfaces';
 import { Body, Controller, Delete, Get, Param, Post } from '@nestjs/common';
 
-import { CreatePalindromeDto } from './database/create-palindrome.dto';
 import { Palindrome } from './database/palindrome.entity';
 import { PalindromeService } from './palindrome.service';
 
