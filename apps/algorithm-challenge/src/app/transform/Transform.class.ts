@@ -30,7 +30,11 @@ export class Transform {
       );
       return -1;
     } else {
-      return Transform.recursionPalindrome(sum, initialN, count + 1);
+      if (Transform.isPalindrome(sum)) {
+        return sum;
+      } else {
+        return Transform.recursionPalindrome(sum, initialN, count + 1);
+      }
     }
   }
 
