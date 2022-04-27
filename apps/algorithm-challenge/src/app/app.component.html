@@ -23,7 +23,25 @@
       with {{ calculation.recursionCount }} cycles to calculate it.</label
     >
   </div>
+  <button (click)="savePalindrome()">Save Palindrome</button>
+  <div *ngIf="palindromeId >= 0">
+    <label>saved Palindrome ID: </label>
+    <span>{{ palindromeId }}</span>
+  </div>
 </div>
 
 <h1>API Calls:</h1>
 <div>Message: {{ hello$ | async | json }}</div>
+
+<h2>Palindromes:</h2>
+<button (click)="getPalindromes()">Load Palindromes</button>
+<div *ngIf="palindrome$ | async as palindromes">
+  <ul>
+    <li *ngFor="let palindrome of palindromes">
+      ID: {{ palindrome.id }}, InputNumber: {{ palindrome.inputNumber }},
+      Palindrome: {{ palindrome.palindrome }}, Cycles: {{ palindrome.cycles }}
+    </li>
+  </ul>
+</div>
+<br />
+<button (click)="clearPalindromes()">Delete all Palindromes in DataBase</button>

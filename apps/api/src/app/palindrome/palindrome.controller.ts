@@ -29,4 +29,9 @@ export class PalindromeController {
   remove(@Param('id') id: number): Promise<void> {
     return this.palindromeService.remove(id);
   }
+
+  @Delete('palindrome')
+  removeAll(): Promise<void> {
+    return this.palindromeService.removeAll();
+  }
 }

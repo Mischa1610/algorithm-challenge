@@ -32,4 +32,8 @@ export class PalindromeService {
   async remove(id: number): Promise<void> {
     await this.palindromeRepository.delete(id);
   }
+
+  async removeAll(): Promise<void> {
+    await this.palindromeRepository.delete({});
+  }
 }

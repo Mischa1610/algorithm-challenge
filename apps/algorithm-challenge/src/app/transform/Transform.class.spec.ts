@@ -36,7 +36,7 @@ describe('Transform Class', () => {
 
     const result2 = Transform.palindrome(34543);
     expect(result2.palindrome).toBe(34543);
-    expect(result2.recursionCount).toBe(1);
+    expect(result2.recursionCount).toBe(0);
 
     const result3 = Transform.palindrome(196);
     expect(result3.palindrome).toBe(-1);
@@ -44,7 +44,7 @@ describe('Transform Class', () => {
 
     const result4 = Transform.palindrome(1221);
     expect(result4.palindrome).toBe(1221);
-    expect(result4.recursionCount).toBe(1);
+    expect(result4.recursionCount).toBe(0);
 
     const result5 = Transform.palindrome(51);
     expect(result5.palindrome).toBe(66);
@@ -52,7 +52,7 @@ describe('Transform Class', () => {
 
     const result6 = Transform.palindrome(11);
     expect(result6.palindrome).toBe(11);
-    expect(result6.recursionCount).toBe(1);
+    expect(result6.recursionCount).toBe(0);
 
     const result7 = Transform.palindrome(607);
     expect(result7.palindrome).toBe(4444);

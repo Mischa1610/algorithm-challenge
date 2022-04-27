@@ -6,7 +6,7 @@ export interface PalindromeCalculation {
 export class Transform {
   public static palindrome(N: number): PalindromeCalculation {
     if (Transform.isPalindrome(N)) {
-      return { palindrome: N, recursionCount: 1 };
+      return { palindrome: N, recursionCount: 0 };
     } else {
       const minInput = 1;
       const maxInput = 10000;
@@ -14,7 +14,7 @@ export class Transform {
         console.error(
           `${N} is not in the allowed range of ${minInput} to ${maxInput}`
         );
-        return { palindrome: -1, recursionCount: 1 };
+        return { palindrome: -1, recursionCount: 0 };
       } else {
         return Transform.recursionPalindrome(N);
       }

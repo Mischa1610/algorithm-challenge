@@ -3,9 +3,9 @@ export interface Message {
 }
 
 export class CreatePalindromeDto {
-  inputNumber: number;
-  palindrome: number;
-  cycles: number;
+  inputNumber!: number;
+  palindrome!: number;
+  cycles!: number;
 }
 
 export interface IPalindrome {
